@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author panyi on 18-4-23.
  */
@@ -24,6 +27,8 @@ public class HelloControler {
 
     @RequestMapping(value = "/hello2")
     public String hi2(@RequestParam String name) {
+        List<String> list = new ArrayList<>();
+        list.stream().forEach(l -> System.out.println(l));
         return serviceHi.hiFromClient(name);
     }
 }

@@ -11,6 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
+        if (name != null && name.length() > 3) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         return "hi " + name + ",i am from port:";
     }
 }

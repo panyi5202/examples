@@ -7,3 +7,9 @@ server:
 spring:
   application:
     name: service-consumer
+feign:
+  hystrix:
+    enabled: true
+logging:
+  level:
+   root: info

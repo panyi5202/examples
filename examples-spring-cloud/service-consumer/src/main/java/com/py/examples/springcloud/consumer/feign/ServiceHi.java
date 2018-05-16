@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author panyi on 18-4-23.
  */
-@FeignClient(value = "service-provider")
+@FeignClient(value = "service-provider", fallback = ServiceHiHystrix.class)
 public interface ServiceHi {
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     String hiFromClient(@RequestParam(value = "name") String name);
