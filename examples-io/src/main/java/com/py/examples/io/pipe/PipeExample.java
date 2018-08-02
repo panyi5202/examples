@@ -23,6 +23,7 @@ public class PipeExample {
             this.pi = pi;
         }
 
+        @Override
         public void run() {
             try(InputStreamReader ir = new InputStreamReader(pi)) {
 
@@ -47,6 +48,7 @@ public class PipeExample {
             this.po = po;
         }
 
+        @Override
         public void run() {
             try {
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(po),5);

@@ -1,4 +1,4 @@
-package com.py.examples.netty;
+package com.py.examples.netty.websocket;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;

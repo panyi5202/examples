@@ -1,4 +1,4 @@
-package com.py.examples.netty;
+package com.py.examples.netty.websocket;
 
 import java.util.Date;
 
@@ -67,7 +67,7 @@ public class MyWebSocketHandler extends SimpleChannelInboundHandler<Object> {
             handWebsocketFrame(context, (WebSocketFrame) msg);
         }
     }
-
+    @Override
     protected void channelRead0(ChannelHandlerContext context, Object msg) throws Exception {
         System.out.println("channelRead0........");
         //处理客户端向服务端发起http握手请求的业务

@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: com.py.examples.sandbox.inst.TestMainInJar
-Premain-Class: com.py.examples.sandbox.inst.Premain
-
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Main-Class: com.py.examples.sandbox.inst.target.TestMainInJar

@@ -1,4 +1,4 @@
-package com.py.examples.netty;
+package com.py.examples.netty.websocket;
 
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
