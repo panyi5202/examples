@@ -1,1 +1,0 @@
-这是一个spring-cloud示例的eureka server，使用spring boot2.0.0；

@@ -1,0 +1,13 @@
+server:
+  port: 7002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:7020/eureka,http://eureka2:7021/eureka
+  instance:
+    instance-id: provider2
+    prefer-ip-address: true
+spring:
+  application:
+    name: provider

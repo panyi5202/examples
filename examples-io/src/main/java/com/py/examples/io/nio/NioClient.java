@@ -14,9 +14,9 @@ import java.nio.channels.SocketChannel;
  */
 public class NioClient {
     public static void main(String[] args) throws IOException {
-        SocketChannel channel = SocketChannel.open();
-        channel.connect(new InetSocketAddress("127.0.0.1", 8888));
-        ByteBuffer buffer = ByteBuffer.allocate(20);
+        SocketChannel channel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8888));
+
+        ByteBuffer buffer = ByteBuffer.allocate(40);
         InputStream in = System.in;
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         String msg ;

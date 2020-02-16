@@ -1,0 +1,20 @@
+server:
+  port: 7011
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:7020/eureka
+    register-with-eureka: false
+
+spring:
+  application:
+    name: consumer
+
+logging:
+  level:
+    com.py: debug
+
+feign:
+  hystrix:
+    enabled: true
