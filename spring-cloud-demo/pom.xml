@@ -16,6 +16,7 @@
         <module>eureka-center2</module>
         <module>hystrix-dashboard</module>
         <module>zuul-gateway</module>
+        <module>config-center</module>
     </modules>
 
     <parent>

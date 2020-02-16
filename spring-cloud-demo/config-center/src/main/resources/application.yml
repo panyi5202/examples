@@ -1,0 +1,11 @@
+server:
+  port: 7101
+
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/panyi5202/examples.git/spring-cloud-demo/config-center/configfiles
