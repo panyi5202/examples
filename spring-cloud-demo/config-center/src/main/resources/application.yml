@@ -8,4 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/panyi5202/examples.git/spring-cloud-demo/config-center/configfiles
+          uri: https://github.com/panyi5202/examples.git
+          search-paths: spring-cloud-demo/config-center/configfiles

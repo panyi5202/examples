@@ -17,6 +17,7 @@
         <module>hystrix-dashboard</module>
         <module>zuul-gateway</module>
         <module>config-center</module>
+        <module>sleuth-center</module>
     </modules>
 
     <parent>

@@ -12,6 +12,33 @@ eureka:
 spring:
   application:
     name: provider
+  zipkin:
+    base-url: http://localhost:8601 #所有的数据提交到此服务之中
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0 # 定义抽样比率，默认为0.1
+
+  cloud:
+    stream:
+      binders: # 在此处配置要绑定的rabbitmq的服务信息；
+        defaultRabbit: # 表示定义的名称，用于于binding整合
+          type: rabbit # 消息组件类型
+          environment: # 设置rabbitmq的相关的环境配置
+            spring:
+              rabbitmq:
+                addresses: localhost
+                port: 15672
+                username: guest
+                password: guest
+                virtual-host: /
+      bindings: # 服务的整合处理
+        output: # 这个名字是一个通道的名称，在分析具体源代码的时候会进行说明
+          destination: EnjoyExchange # 表示要使用的Exchange名称定义
+          content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
+          binder: defaultRabbit # 设置要绑定的消息服务的具体设置
+
 management:
   endpoints:
     web:

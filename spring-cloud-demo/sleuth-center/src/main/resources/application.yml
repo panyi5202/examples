@@ -1,0 +1,12 @@
+server:
+  port: 8601
+spring:
+  application:
+    name: sleuth-server
+
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

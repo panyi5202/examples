@@ -23,7 +23,7 @@ public class ProductController {
     public String detail(@PathVariable String str) {
         int i = new Random().nextInt(100);
         System.out.println("=================> " + i);
-        if (i > 5) {
+        if (i > 50) {
             throw new RuntimeException("product exception");
         }
         return "product:" + str;
